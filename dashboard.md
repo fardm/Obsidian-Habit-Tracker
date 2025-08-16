@@ -145,7 +145,8 @@ const CONFIG = {
   }
   .kpi b { font-variant-numeric: tabular-nums; }
   .warning-message {
-    background: rgba(237, 190, 11, 0.15);
+    background: rgba(237, 190, 11, 0.12);
+    color: var(--color-base-100);
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -213,8 +214,7 @@ function isSuccessful(value, completeCondition) {
 function barColor(percent, lowerIsBetter=false) {
   const p = Math.max(0, Math.min(1, percent));
   if (lowerIsBetter) {
-    const hue = 120 * (1 - p);
-    return `hsl(${hue}, 70%, 48%)`;
+    return `hsl(0, 70%, ${85 - p * 40}%)`;
   } else {
     return `hsl(120, 70%, ${85 - p * 40}%)`;
   }
@@ -324,7 +324,7 @@ root.setAttr("dir", "rtl");
 
 if (!todayPage) {
   const warn = dv.container.createDiv({ cls: "warning-message" });
-  warn.createSpan({ text: "⚠ یادداشت امروز پیدا نشد" });
+  warn.createSpan({ text: "⚠ یادداشت امروز پیدا نشد!" });
   warn.createSpan({ cls: "subtle", text: `فایلی با تاریخ ${todayISO} و فیلترهای مشخص‌شده پیدا نشد.` });
 }
 

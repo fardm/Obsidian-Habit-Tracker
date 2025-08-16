@@ -16,7 +16,7 @@
               "state": {
                 "file": "dashboard.md",
                 "mode": "preview",
-                "source": true
+                "source": false
               },
               "pinned": true,
               "icon": "lucide-file",
@@ -24,7 +24,7 @@
             }
           },
           {
-            "id": "71d47b9ddf607931",
+            "id": "bb4567bc968059c2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -216,13 +216,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "71d47b9ddf607931",
+  "active": "bb4567bc968059c2",
   "lastOpenFiles": [
     "dashboard.md",
+    "journal/1404/1404.md",
+    "journal/1404/daily/2025-08-16.md",
     "README.md",
     "Dashboard-Guide.md",
     "Habit-Tracker-Guide.md",
-    "journal/1404/1404.md",
     "template/🌏 new year.md",
     "template/📅 new week.md",
     "template/➕ new habit.md",
@@ -234,7 +235,6 @@
     "journal/1404/daily/2025-08-11.md",
     "journal/1404/daily/2025-08-12.md",
     "journal/1404/daily/2025-08-13.md",
-    "journal/1404/daily/2025-08-16.md",
     "journal/1404/daily/2025-08-15.md",
     "journal/1404/daily/2025-08-14.md",
     "journal/1404/daily/2025-07-26.md",
