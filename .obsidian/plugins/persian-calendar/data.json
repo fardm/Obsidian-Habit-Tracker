@@ -1,0 +1,21 @@
+{
+  "dailyNotesFolderPath": "journal/1403/daily",
+  "weeklyNotesFolderPath": "journal/1403/weekly",
+  "monthlyNotesFolderPath": "journal/1403/monthly",
+  "yearlyNotesFolderPath": "journal/1403",
+  "enableQuarterlyNotes": false,
+  "quarterlyNotesFolderPath": "/",
+  "dateFormat": "georgian",
+  "version": "3.0.1",
+  "timeoutDuration": 1250,
+  "announceUpdates": true,
+  "showGeorgianDates": true,
+  "hijriDateAdjustment": -1,
+  "showHijriDates": false,
+  "weekendDays": "friday",
+  "showHolidays": true,
+  "showOfficialIranianCalendar": true,
+  "showAncientIranianCalendar": true,
+  "showShiaCalendar": true,
+  "hijriCalendarType": "iran"
+}

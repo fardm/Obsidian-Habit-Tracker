@@ -1,0 +1,29 @@
+/* راستچین برای پلاگین دیتاویو */
+.rtl-dataview .block-language-dataview {
+    direction: rtl;
+    text-align-last: center;
+}
+
+/* راستچین برای پلاگین ترکر */
+.rtl-tracker .block-language-tracker {
+    direction: rtl;
+}
+
+/* بوردر برای پلاگین tabs */
+.border-tab .tabs-container {
+    border: 1px solid #9595954d;
+    border-radius: 10px;
+    padding: 5px;   
+}
+
+.border-tab .tabs-nav{
+    border-bottom: 1px solid #9595954d;
+    direction: rtl;
+}
+
+
+
+
+
+
+

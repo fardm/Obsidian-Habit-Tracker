@@ -1,0 +1,270 @@
+{
+  "folderMappings": [
+    {
+      "folder": "journal",
+      "toolbar": "journal"
+    },
+    {
+      "folder": "template",
+      "toolbar": "journal"
+    }
+  ],
+  "icon": "circle-ellipsis",
+  "showEditInFabMenu": false,
+  "toolbarProp": "notetoolbar",
+  "toolbars": [
+    {
+      "defaultStyles": [
+        "button",
+        "center",
+        "even",
+        "sticky"
+      ],
+      "items": [
+        {
+          "label": "امسال",
+          "icon": "lucide-globe-2",
+          "link": "Persian Calendar: Yearly - باز کردن سال‌نوشت امسال",
+          "linkAttr": {
+            "commandId": "persian-calendar:open-current-years-note",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "mobile": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "tablet": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "label": "این ماه",
+          "icon": "lucide-moon",
+          "link": "Persian Calendar: Monthly - بازکردن ماه‌نوشت این ماه",
+          "linkAttr": {
+            "commandId": "persian-calendar:open-current-months-note",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "mobile": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "tablet": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "label": "این هفته",
+          "icon": "lucide-calendar",
+          "link": "Persian Calendar: Weekly - باز کردن هفته‌نوشت این هفته",
+          "linkAttr": {
+            "commandId": "persian-calendar:open-this-weeks-note",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "mobile": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "tablet": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "label": "فردا",
+          "icon": "lucide-chevron-left-circle",
+          "link": "Persian Calendar: Tomorrow - باز کردن روزنوشت فردا",
+          "linkAttr": {
+            "commandId": "persian-calendar:open-tomorrow-daily-note",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "mobile": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "tablet": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "label": "امروز",
+          "icon": "lucide-circle-dot",
+          "link": "Persian Calendar: Today - باز کردن روزنوشت امروز",
+          "linkAttr": {
+            "commandId": "persian-calendar:open-todays-daily-note",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "mobile": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "tablet": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "label": "دیروز",
+          "icon": "lucide-chevron-right-circle",
+          "link": "Persian Calendar: Yesterday - باز کردن روزنوشت دیروز",
+          "linkAttr": {
+            "commandId": "persian-calendar:open-yesterday-daily-note",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "mobile": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "tablet": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "mobileStyles": [],
+      "name": "journal",
+      "position": {
+        "desktop": {
+          "allViews": {
+            "position": "top"
+          }
+        },
+        "mobile": {
+          "allViews": {
+            "position": "props"
+          }
+        },
+        "tablet": {
+          "allViews": {
+            "position": "props"
+          }
+        }
+      },
+      "updated": "2024-07-10T10:35:20.038Z"
+    }
+  ],
+  "version": 20240426.1
+}

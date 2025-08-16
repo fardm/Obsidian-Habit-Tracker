@@ -1,0 +1,14 @@
+{
+  "accentColor": "",
+  "cssTheme": "Minimal",
+  "interfaceFontFamily": "Sahel",
+  "textFontFamily": "Sahel",
+  "monospaceFontFamily": "Sahel",
+  "baseFontSize": 18,
+  "enabledCssSnippets": [
+    "My Edit",
+    "My custom css",
+    "custom css"
+  ],
+  "theme": "system"
+}
