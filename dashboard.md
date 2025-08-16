@@ -1,12 +1,12 @@
 ```dataviewjs
 /* ========================= CONFIG ========================= */
 const CONFIG = {
-  filters: {
+  from: {
     tags: ["journal"], // تگ یادداشت روزانه
     paths: []          // مسیر یادداشت روزانه
   },
   dateSource: {
-    from: "filename", // "filename" یا "frontmatter"
+    type: "filename", // "filename" یا "frontmatter"
     frontmatterField: "date", // نام فیلد تاریخ در frontmatter
     dateFormat: "YYYY/MM/DD" // فرمت تاریخ برای
   },
@@ -165,7 +165,7 @@ const today = window.moment().startOf("day");
 const todayISO = today.format("YYYY-MM-DD");
 
 function parseDateFromFileName(name, page) {
-  if (CONFIG.dateSource.from === "filename") {
+  if (CONFIG.dateSource.type === "filename") {
     const m = String(name).match(/(\d{4}-\d{2}-\d{2})/);
     if (!m) {
       console.warn(`Invalid date in filename: ${name}`);
@@ -177,7 +177,7 @@ function parseDateFromFileName(name, page) {
       return null;
     }
     return parsedDate.startOf("day");
-  } else if (CONFIG.dateSource.from === "frontmatter") {
+  } else if (CONFIG.dateSource.type === "frontmatter") {
     const fmDate = getFieldValue(page, CONFIG.dateSource.frontmatterField);
     if (!fmDate) {
       console.warn(`No date found in frontmatter field '${CONFIG.dateSource.frontmatterField}' for page: ${page.file.path}`);
@@ -191,7 +191,7 @@ function parseDateFromFileName(name, page) {
     }
     return parsedDate.startOf("day");
   }
-  console.warn(`Invalid dateSource.from: ${CONFIG.dateSource.from}`);
+  console.warn(`Invalid dateSource.from: ${CONFIG.dateSource.type}`);
   return null;
 }
 
@@ -292,15 +292,15 @@ function computeChainsWithDates(successDates, graceDays, cupEvery) {
            longest, longestRange: { start: longestStart, end: longestEnd }, total: successDates.length, cups };
 }
 
-/* =============== QUERY PAGES WITH FILTERS =============== */
+/* =============== QUERY PAGES WITH FROM =============== */
 let q = dv.pages();
-if (CONFIG.filters.tags.length || CONFIG.filters.paths.length) {
+if (CONFIG.from.tags.length || CONFIG.from.paths.length) {
   q = q.where(p => {
-    const hasTags = CONFIG.filters.tags.length
-      ? CONFIG.filters.tags.every(tag => p.file.tags.includes(`#${tag}`))
+    const hasTags = CONFIG.from.tags.length
+      ? CONFIG.from.tags.every(tag => p.file.tags.includes(`#${tag}`))
       : true;
-    const hasPaths = CONFIG.filters.paths.length
-      ? CONFIG.filters.paths.some(path => p.file.path.includes(path))
+    const hasPaths = CONFIG.from.paths.length
+      ? CONFIG.from.paths.some(path => p.file.path.includes(path))
       : true;
     return hasTags && hasPaths;
   });
@@ -322,7 +322,6 @@ const todayPage = todayEntry?.page;
 const root = dv.container.createDiv({ cls: "habit-grid" });
 root.setAttr("dir", "rtl");
 
-// اگر یادداشت امروز پیدا نشد، پیام هشدار را بالای کارت‌ها نمایش بده
 if (!todayPage) {
   const warn = dv.container.createDiv({ cls: "warning-message" });
   warn.createSpan({ text: "⚠ یادداشت امروز پیدا نشد" });
