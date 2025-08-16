@@ -8283,7 +8283,15 @@ var PersianCalendarView = class extends import_obsidian.View {
         dayEl.addEventListener("click", () => {
           this.openOrCreateDailyNote(dayNumber);
         });
+        const persianDate = { jy: jalaaliDate.jy, jm: jalaaliDate.jm, jd: dayNumber };
+        const ummalquraAdjustment = this.plugin.settings.hijriDateAdjustment;
+        const hijriDateResult = this.getHijriDate(persianDate, this.plugin.settings.hijriCalendarType, ummalquraAdjustment);
+        const hijriDate = hijriDateResult.hd.toString();
+        const hijriMonth = hijriDateResult.hm;
         if (this.plugin.settings.showHolidays && this.isHoliday("PersianCalendar", jalaaliDate.jm, dayNumber)) {
+          isHoliday = true;
+        }
+        if (this.plugin.settings.showHolidays && this.isHoliday("HijriCalendar", hijriMonth, parseInt(hijriDate))) {
           isHoliday = true;
         }
         dayEl.addEventListener("mouseenter", (e) => {
@@ -8314,12 +8322,20 @@ var PersianCalendarView = class extends import_obsidian.View {
         if (this.plugin.settings.showGeorgianDates) {
           const georgianDate = jalaali.toGregorian(jalaaliDate.jy, jalaaliDate.jm, dayNumber);
           const georgianDateEl = dayEl.createEl("div", { cls: showBothCalendars ? "georgian-date-corner" : "georgian-date" });
+          const persianDate = { jy: jalaaliDate.jy, jm: jalaaliDate.jm, jd: dayNumber };
+          const ummalquraAdjustment = this.plugin.settings.hijriDateAdjustment;
+          const hijriDateResult = this.getHijriDate(persianDate, this.plugin.settings.hijriCalendarType, ummalquraAdjustment);
+          const hijriDate = hijriDateResult.hd.toString();
+          const hijriMonth = hijriDateResult.hm;
           georgianDateEl.textContent = georgianDate.gd.toString();
           if (this.plugin.settings.showHolidays && this.isHoliday("GregorianCalendar", georgianDate.gm, georgianDate.gd)) {
             isHoliday = true;
           }
           if (this.isToday({ jy: jalaaliDate.jy, jm: jalaaliDate.jm, jd: dayNumber })) {
             dayEl.addClass("today");
+          }
+          if (this.plugin.settings.showHolidays && this.isHoliday("HijriCalendar", hijriMonth, parseInt(hijriDate))) {
+            isHoliday = true;
           }
         }
         if (this.plugin.settings.showHijriDates) {
@@ -9434,7 +9450,7 @@ var UpdateModal = class extends import_obsidian3.Modal {
   onOpen() {
     const { contentEl } = this;
     contentEl.setAttribute("dir", "rtl");
-    contentEl.createEl("h3", { text: "\u062A\u063A\u06CC\u06CC\u0631\u0627\u062A \u0646\u0633\u062E\u0647 3.0.1 \u0627\u0641\u0632\u0648\u0646\u0647 \u062A\u0642\u0648\u06CC\u0645 \u0641\u0627\u0631\u0633\u06CC" });
+    contentEl.createEl("h3", { text: "\u062A\u063A\u06CC\u06CC\u0631\u0627\u062A \u0646\u0633\u062E\u0647 \u0633\u0648\u0645 \u0627\u0641\u0632\u0648\u0646\u0647 \u062A\u0642\u0648\u06CC\u0645 \u0641\u0627\u0631\u0633\u06CC" });
     contentEl.createEl("p", { text: "- \u0627\u0636\u0627\u0641\u0647 \u0634\u062F\u0646 \u0631\u0648\u06CC\u062F\u0627\u062F\u0647\u0627\u06CC \u062A\u0642\u0648\u06CC\u0645 \u0631\u0633\u0645\u06CC \u0627\u06CC\u0631\u0627\u0646 \u0648 \u0646\u0645\u0627\u06CC\u0634 \u062F\u0631 \u062A\u0642\u0648\u06CC\u0645: \u062D\u0627\u0644\u0627 \u0645\u06CC\u200C\u062A\u0648\u0627\u0646\u06CC\u062F \u0631\u0648\u06CC\u062F\u0627\u062F\u0647\u0627\u06CC \u062A\u0642\u0648\u06CC\u0645 \u0631\u0633\u0645\u06CC \u0627\u06CC\u0631\u0627\u0646 \u0631\u0627 \u062F\u0631 \u062A\u0642\u0648\u06CC\u0645 \u062E\u0648\u062F \u0645\u0634\u0627\u0647\u062F\u0647 \u06A9\u0646\u06CC\u062F." });
     contentEl.createEl("p", { text: "- \u0627\u0636\u0627\u0641\u0647 \u0634\u062F\u0646 \u062A\u0642\u0648\u06CC\u0645 \u0647\u062C\u0631\u06CC \u0642\u0645\u0631\u06CC \u0628\u0631 \u0627\u0633\u0627\u0633 \u062A\u0642\u0648\u06CC\u0645 \u0627\u06CC\u0631\u0627\u0646: \u0628\u0627 \u0627\u06CC\u0646 \u0648\u06CC\u0698\u06AF\u06CC \u0645\u06CC\u200C\u062A\u0648\u0627\u0646\u06CC\u062F \u062A\u0627\u0631\u06CC\u062E\u200C\u0647\u0627\u06CC \u0647\u062C\u0631\u06CC \u0642\u0645\u0631\u06CC \u0631\u0627 \u0628\u0631 \u0627\u0633\u0627\u0633 \u062A\u0642\u0648\u06CC\u0645 \u0627\u06CC\u0631\u0627\u0646 \u062F\u0631 \u062A\u0642\u0648\u06CC\u0645 \u0645\u0634\u0627\u0647\u062F\u0647 \u06A9\u0646\u06CC\u062F. \u0628\u0631\u0627\u06CC \u0641\u0639\u0627\u0644\u200C\u0633\u0627\u0632\u06CC \u062A\u0646\u0638\u06CC\u0645\u0627\u062A \u0631\u0627 \u0628\u0631\u0631\u0633\u06CC \u06A9\u0646\u06CC\u062F.." });
     contentEl.createEl("p", { text: "- \u0627\u0636\u0627\u0641\u0647 \u0634\u062F\u0646 {{\u0645\u0646\u0627\u0633\u0628\u062A}} \u0628\u0631\u0627\u06CC \u063A\u0646\u06CC\u200C\u062A\u0631 \u06A9\u0631\u062F\u0646 \u0646\u0648\u0634\u062A\u0647\u200C\u0647\u0627 \u0628\u0631 \u0627\u0633\u0627\u0633 \u062A\u0646\u0638\u06CC\u0645\u0627\u062A \u0634\u0645\u0627: \u0627\u0632 \u0627\u06CC\u0646 \u0628\u0647 \u0628\u0639\u062F \u0645\u06CC\u200C\u062A\u0648\u0627\u0646\u06CC\u062F \u0627\u0632 {{\u0645\u0646\u0627\u0633\u0628\u062A}} \u0628\u0631\u0627\u06CC \u0627\u0636\u0627\u0641\u0647 \u06A9\u0631\u062F\u0646 \u0631\u0648\u06CC\u062F\u0627\u062F\u0647\u0627 \u0628\u0647 \u0646\u0648\u0634\u062A\u0647\u200C\u0647\u0627\u06CC \u062E\u0648\u062F \u0627\u0633\u062A\u0641\u0627\u062F\u0647 \u06A9\u0646\u06CC\u062F." });
@@ -9442,6 +9458,8 @@ var UpdateModal = class extends import_obsidian3.Modal {
     contentEl.createEl("p", { text: "- \u0628\u0627\u0632\u0637\u0631\u0627\u062D\u06CC \u0646\u0645\u0627\u06CC\u0634 \u0627\u0645\u0631\u0648\u0632 \u062F\u0631 \u062A\u0642\u0648\u06CC\u0645: \u0646\u0645\u0627\u06CC\u0634 \u0627\u0645\u0631\u0648\u0632 \u062F\u0631 \u062A\u0642\u0648\u06CC\u0645 \u0628\u0647\u0628\u0648\u062F \u06CC\u0627\u0641\u062A\u0647 \u0648 \u0628\u0627 \u06CC\u06A9 \u0646\u06AF\u0627\u0647 \u0628\u0647\u062A\u0631 \u0634\u0646\u0627\u0633\u0627\u06CC\u06CC \u0645\u06CC\u200C\u0634\u0648\u062F." });
     contentEl.createEl("p", { text: "- \u0627\u0636\u0627\u0641\u0647 \u0634\u062F\u0646 {{\u0627\u0648\u0644 \u0633\u0627\u0644}} \u0648 {{\u0622\u062E\u0631 \u0633\u0627\u0644}}: \u0627\u0648\u0644 \u0648 \u0622\u062E\u0631 \u0633\u0627\u0644 \u0631\u0627 \u0628\u0647 \u0634\u0645\u0633\u06CC \u06CC\u0627 \u0645\u06CC\u0644\u0627\u062F\u06CC \u0628\u0631 \u0627\u0633\u0627\u0633 \u0633\u0627\u0644\u200C\u0646\u0648\u0634\u062A \u0628\u0631\u0645\u06CC\u200C\u06AF\u0631\u062F\u0627\u0646\u062F." });
     contentEl.createEl("p", { text: "- \u0631\u0641\u0639 \u0628\u0627\u06AF {{\u0639\u0628\u0627\u0631\u062A\u200C\u0647\u0627\u06CC \u0645\u0639\u0646\u0627\u062F\u0627\u0631}} \u0648 \u062A\u062F\u0627\u062E\u0644 \u0628\u0627 \u062A\u0645\u067E\u0644\u06CC\u062A\u0631: \u0628\u0627\u06AF\u200C\u0647\u0627\u06CC \u0645\u0631\u062A\u0628\u0637 \u0628\u0627 {{\u0639\u0628\u0627\u0631\u062A\u200C\u0647\u0627\u06CC \u0645\u0639\u0646\u0627\u062F\u0627\u0631}} \u0648 \u062A\u062F\u0627\u062E\u0644 \u0628\u0627 \u062A\u0645\u067E\u0644\u06CC\u062A\u0631 \u0631\u0641\u0639 \u0634\u062F\u0647\u200C \u0627\u0633\u062A." });
+    contentEl.createEl("p", { text: "- \u0631\u0641\u0639 \u0628\u0627\u06AF {{\u0639\u0628\u0627\u0631\u062A\u200C\u0647\u0627\u06CC \u0645\u0639\u0646\u0627\u062F\u0627\u0631}} \u0648 \u062A\u062F\u0627\u062E\u0644 \u0628\u0627 \u062A\u0645\u067E\u0644\u06CC\u062A\u0631: \u0628\u0627\u06AF\u200C\u0647\u0627\u06CC \u0645\u0631\u062A\u0628\u0637 \u0628\u0627 {{\u0639\u0628\u0627\u0631\u062A\u200C\u0647\u0627\u06CC \u0645\u0639\u0646\u0627\u062F\u0627\u0631}} \u0648 \u062A\u062F\u0627\u062E\u0644 \u0628\u0627 \u062A\u0645\u067E\u0644\u06CC\u062A\u0631 \u0631\u0641\u0639 \u0634\u062F\u0647\u200C \u0627\u0633\u062A." });
+    contentEl.createEl("p", { text: "- \u0648\u0642\u062A\u06CC \u0627\u0641\u0632\u0648\u0646\u0647 \u0641\u0639\u0627\u0644 \u0645\u06CC\u200C\u0634\u0648\u062F \u0628\u0647 \u0635\u0648\u0631\u062A \u067E\u06CC\u0634\u200C\u0641\u0631\u0636 \u062F\u0631 \u0633\u0627\u06CC\u062F\u0628\u0627\u0631 \u0646\u0645\u0627\u06CC\u0634 \u062F\u0627\u062F\u0647 \u0645\u06CC\u200C\u0634\u0648\u062F." });
     contentEl.createEl("p", { text: "\u0628\u0631\u0627\u06CC \u062D\u0645\u0627\u06CC\u062A \u0648 \u0628\u0627\u0632\u062E\u0648\u0631\u062F \u062F\u0631 \u0645\u0648\u0631\u062F \u0627\u06CC\u0646 \u0627\u0641\u0632\u0648\u0646\u0647 \u06A9\u0627\u0646\u0627\u0644 \u062A\u0644\u06AF\u0631\u0627\u0645 \u06A9\u0627\u0631\u0641\u06A9\u0631 \u0631\u0627 \u062F\u0646\u0628\u0627\u0644 \u06A9\u0646\u06CC\u062F." });
     const buttonContainer = contentEl.createEl("div", { cls: "button-container" });
     const button = buttonContainer.createEl("button", { text: "\u06A9\u0627\u0631\u0641\u06A9\u0631 \u062F\u0631 \u062A\u0644\u06AF\u0631\u0627\u0645" });
@@ -9565,19 +9583,18 @@ var PersianCalendarPlugin = class extends import_obsidian5.Plugin {
   }
   async onload() {
     await this.loadSettings();
-    this.registerView("persian-calendar", (leaf) => new PersianCalendarView(leaf, this.app, this.settings, this.plugin));
+    this.registerView(
+      "persian-calendar",
+      (leaf) => this.view = new PersianCalendarView(leaf, this.app, this.settings, this.plugin)
+    );
+    if (this.app.workspace.getLeavesOfType("persian-calendar").length === 0) {
+      this.activateView();
+    }
     this.addRibbonIcon("calendar", "\u0631\u0648\u0632\u0646\u0648\u0634\u062A \u0627\u0645\u0631\u0648\u0632", async () => {
-      const todayJalaali = (0, import_jalaali_js5.toJalaali)(new Date());
+      const today = new Date();
+      const todayJalaali = (0, import_jalaali_js5.toJalaali)(today);
       const dayNumber = todayJalaali.jd;
-      const leaf = this.app.workspace.getLeavesOfType("persian-calendar")[0];
-      if (leaf) {
-        const view = leaf.view;
-        if (view instanceof PersianCalendarView) {
-          await view.openOrCreateDailyNote(dayNumber);
-        }
-      } else {
-        console.error("Persian Calendar view is not open. Please open the Persian Calendar first.");
-      }
+      openNoteForDate(todayJalaali.jy, todayJalaali.jm, dayNumber);
     });
     super.onload();
     this.registerEditorSuggest(new DateSuggester(this));
@@ -9803,19 +9820,12 @@ var PersianCalendarPlugin = class extends import_obsidian5.Plugin {
     return currentWeekNumber;
   }
   async activateView() {
-    let leaf = this.app.workspace.getLeavesOfType("persian-calendar").first();
-    if (!leaf) {
-      leaf = this.app.workspace.getRightLeaf(false);
-      await leaf.setViewState({
-        type: "persian-calendar"
-      });
-    }
-    if (!leaf || !(leaf.view instanceof PersianCalendarView)) {
-      new import_obsidian5.Notice("Unable to open Persian Calendar view. Please make sure the plugin is correctly installed from community plugins directroy.");
-      return;
-    }
+    const leaf = this.app.workspace.getRightLeaf(false);
+    await leaf.setViewState({
+      type: "persian-calendar",
+      active: true
+    });
     this.app.workspace.revealLeaf(leaf);
-    leaf.view.focus();
   }
   refreshViews() {
     if (this.app.workspace.getLeavesOfType("persian-calendar").length > 0) {
@@ -9825,6 +9835,9 @@ var PersianCalendarPlugin = class extends import_obsidian5.Plugin {
         }
       });
     }
+  }
+  onunload() {
+    this.app.workspace.getLeavesOfType("persian-calendar").forEach((leaf) => leaf.detach());
   }
 };
 /*! Bundled license information:
@@ -9836,3 +9849,5 @@ moment/moment.js:
   (*! license : MIT *)
   (*! momentjs.com *)
 */
+
+/* nosourcemap */

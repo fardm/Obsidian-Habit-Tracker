@@ -4,12 +4,11 @@ cssclasses:
   - rtl-dataview
   - border-tab
 ---
-# ردیاب عادت
 
-## 🏋️‍♂️ ورزش
+## 🏋️ ورزش
 
 ````tabs
-tab: 🏋️‍♂️
+tab: 🏋️
 
 ```contributionGraph
 title: " "
@@ -30,7 +29,7 @@ dataSource:
     value: date
   countField:
     type: PAGE_PROPERTY
-    value: 🏋️‍♂️exercise
+    value: 🏋️exercise
 fillTheScreen: false
 enableMainContainerShadow: false
 fromDate: {{اول هفته}}
@@ -52,7 +51,7 @@ mainContainerStyle:
 table without id
 "✅ این هفته: " + length(rows) + " روز ورزش کردم" as Exercise
 from #journal
-where date >= date("{{اول هفته}}") AND date <= date("{{آخر هفته}}") And 🏋️‍♂️exercise
+where date >= date("{{اول هفته}}") AND date <= date("{{آخر هفته}}") And 🏋️exercise
 GROUP BY ""
 ```
 
@@ -236,4 +235,3 @@ bar:
 
 
 
-# یادداشت

@@ -4,6 +4,7 @@
     "cssclasses": "multitext",
     "tags": "tags",
     "📱social": "number",
-    "📚reading": "number"
+    "📚reading": "number",
+    "🌎en": "number"
   }
 }

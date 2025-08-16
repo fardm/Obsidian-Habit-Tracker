@@ -237,7 +237,6 @@ cellStyleRules:
     color: "#083864ff"
     text: ""
 cellStyle:
-  minHeight: 15px
 mainContainerStyle:
   backgroundColor: "#ffffff00"
 ```

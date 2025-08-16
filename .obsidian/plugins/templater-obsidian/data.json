@@ -15,20 +15,27 @@
   "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "journal/1403/daily",
+      "folder": "journal/1404/daily",
       "template": "template/🌞 new day.md"
     },
     {
-      "folder": "journal/1403/monthly",
+      "folder": "journal/1404/monthly",
       "template": "template/🌑 new month.md"
     },
     {
-      "folder": "journal/1403/weekly",
+      "folder": "journal/1404/weekly",
       "template": "template/📅 new week.md"
     },
     {
-      "folder": "journal/1403",
+      "folder": "journal/1404",
       "template": "template/🌏 new year.md"
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
     }
   ],
   "syntax_highlighting": true,
@@ -39,5 +46,6 @@
   "startup_templates": [
     ""
   ],
+  "intellisense_render": 1,
   "enable_ribbon_icon": true
 }

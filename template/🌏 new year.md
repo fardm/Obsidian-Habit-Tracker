@@ -4,9 +4,8 @@ cssclasses:
   - rtl-dataview
   - border-tab
 ---
-# ردیاب عادت
 
-## 🏋️‍♂️ ورزش
+## 🏋️ ورزش
 
 ````tabs
 tab: 📅 تقویم
@@ -30,7 +29,7 @@ dataSource:
     value: date
   countField:
     type: PAGE_PROPERTY
-    value: 🏋️‍♂️exercise
+    value: 🏋️exercise
 fillTheScreen: true
 enableMainContainerShadow: false
 fromDate: {{اول سال}}
@@ -42,7 +41,6 @@ cellStyleRules:
     max: 2
 cellStyle:
   borderRadius: ""
-  minHeight: 15px
 mainContainerStyle:
   backgroundColor: "#00000000"
 ```
@@ -51,8 +49,8 @@ mainContainerStyle:
 tab: 🧮 آمار
 ```dataview
 TABLE 
-    "✔ " + length(filter(rows, (r) => r.🏋️‍♂️exercise = true)) + " روز ورزش کــــردم" as true,
-    "❌ " + length(filter(rows, (r) => r.🏋️‍♂️exercise = false)) + " روز ورزش نکردم" as false
+    "✔ " + length(filter(rows, (r) => r.🏋️exercise = true)) + " روز ورزش کــــردم" as true,
+    "❌ " + length(filter(rows, (r) => r.🏋️exercise = false)) + " روز ورزش نکردم" as false
 FROM #journal
 WHERE file.name >= ("{{اول سال}}") AND file.name <= ("{{آخر سال}}")
 GROUP BY ""
@@ -108,7 +106,6 @@ cellStyleRules:
     min: "15"
     max: "999"
 cellStyle:
-  minHeight: 15px
 mainContainerStyle:
   backgroundColor: "#ffffff00"
 
@@ -197,7 +194,6 @@ cellStyleRules:
     color: "#083864ff"
     text: ""
 cellStyle:
-  minHeight: 15px
 mainContainerStyle:
   backgroundColor: "#ffffff00"
 ```
@@ -232,6 +228,3 @@ bar:
 ```
 ````
 
-
-
-# یادداشت

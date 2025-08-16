@@ -1,16 +1,42 @@
 {
+  "debugEnabled": false,
+  "emptyViewToolbar": null,
+  "export": {
+    "includeIcons": true,
+    "replaceVars": true,
+    "useDataEls": true,
+    "useIds": true
+  },
   "folderMappings": [
     {
       "folder": "journal",
-      "toolbar": "journal"
+      "toolbar": "0ce5be56-0c53-4e66-8e50-b188f29f7b2f"
     },
     {
       "folder": "template",
-      "toolbar": "journal"
+      "toolbar": "0ce5be56-0c53-4e66-8e50-b188f29f7b2f"
     }
   ],
   "icon": "circle-ellipsis",
+  "keepPropsState": false,
+  "onboarding": {
+    "new-toolbar-mapping": true
+  },
+  "ribbonAction": "toolbar",
+  "scriptingEnabled": false,
   "showEditInFabMenu": false,
+  "showLaunchpad": false,
+  "showToolbarIn": {
+    "audio": false,
+    "bases": false,
+    "canvas": false,
+    "image": false,
+    "kanban": false,
+    "pdf": false,
+    "video": false
+  },
+  "showToolbarInFileMenu": false,
+  "showToolbarInOther": "",
   "toolbarProp": "notetoolbar",
   "toolbars": [
     {
@@ -56,7 +82,9 @@
                 ]
               }
             }
-          }
+          },
+          "uuid": "98e5ed8c-c9c4-443a-95c3-4a556ee39408",
+          "inGallery": false
         },
         {
           "label": "این ماه",
@@ -93,7 +121,9 @@
                 ]
               }
             }
-          }
+          },
+          "uuid": "2bd5338d-da12-40d7-be4d-ebf22d533032",
+          "inGallery": false
         },
         {
           "label": "این هفته",
@@ -130,7 +160,9 @@
                 ]
               }
             }
-          }
+          },
+          "uuid": "d178a81c-5ec6-451f-8f91-b159d489c3a8",
+          "inGallery": false
         },
         {
           "label": "فردا",
@@ -167,7 +199,9 @@
                 ]
               }
             }
-          }
+          },
+          "uuid": "5418638c-fdbd-420b-9e2d-7e8843d4928c",
+          "inGallery": false
         },
         {
           "label": "امروز",
@@ -204,7 +238,9 @@
                 ]
               }
             }
-          }
+          },
+          "uuid": "f52ee2b4-0005-4ef9-a7b9-f5424cb14d1e",
+          "inGallery": false
         },
         {
           "label": "دیروز",
@@ -241,7 +277,9 @@
                 ]
               }
             }
-          }
+          },
+          "uuid": "85c79d92-5c09-4369-930c-3852a346aa3d",
+          "inGallery": false
         }
       ],
       "mobileStyles": [],
@@ -263,8 +301,10 @@
           }
         }
       },
-      "updated": "2024-07-10T10:35:20.038Z"
+      "updated": "2024-07-10T10:35:20.038Z",
+      "uuid": "0ce5be56-0c53-4e66-8e50-b188f29f7b2f"
     }
   ],
-  "version": 20240426.1
+  "version": 20250313.1,
+  "whatsnew_version": "1.25"
 }
