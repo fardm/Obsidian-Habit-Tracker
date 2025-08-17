@@ -118,7 +118,6 @@
       {
         "id": "82d5925aea562587",
         "type": "tabs",
-        "dimension": 57.403846153846146,
         "children": [
           {
             "id": "aba0d2997efb9b52",
@@ -184,9 +183,8 @@
         "currentTab": 3
       },
       {
-        "id": "e4027fa3a9c4faba",
+        "id": "c2aa53421f6f49c3",
         "type": "tabs",
-        "dimension": 42.59615384615385,
         "children": [
           {
             "id": "1fc2bb515d8e32f0",
@@ -218,10 +216,11 @@
   },
   "active": "bb4567bc968059c2",
   "lastOpenFiles": [
+    "README 1.md",
+    "README.md",
     "dashboard.md",
     "journal/1404/1404.md",
     "journal/1404/daily/2025-08-16.md",
-    "README.md",
     "Dashboard-Guide.md",
     "Habit-Tracker-Guide.md",
     "template/🌏 new year.md",
@@ -243,7 +242,6 @@
     "journal/1404/daily/2025-07-29.md",
     "journal/1404/daily/2025-07-30.md",
     "journal/1404/daily/2025-07-31.md",
-    "journal/1404/daily/2025-08-01.md",
     "zzz",
     "دیتا ویو نوار پیشرفت",
     "Attachments/font/Sahel-VF.ttf",
