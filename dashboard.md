@@ -279,11 +279,18 @@ function computeChainsWithDates(successDates, graceDays, cupEvery) {
   if (cupEvery > 0) {
     let count = 0, start = successDates[0];
     for (let i = 0; i < successDates.length; i++) {
+      if (i > 0) {
+        const gap = successDates[i].diff(successDates[i - 1], "days");
+        if (gap > maxGap) {
+          count = 0; 
+          start = successDates[i]; 
+        }
+      }
       count++;
       if (count === cupEvery) {
         cups.push({ num: cups.length + 1, start, end: successDates[i] });
-        count = 0;
-        start = successDates[i+1];
+        count = 0; 
+        start = successDates[i + 1]; 
       }
     }
   }
