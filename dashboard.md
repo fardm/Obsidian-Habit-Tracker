@@ -239,26 +239,32 @@ function computeChainsWithDates(successDates, graceDays, cupEvery) {
   const maxGap = graceDays + 1;
 
   // longest
-  let longest = 1, run = 1, longestStart = successDates[0], longestEnd = successDates[0], tempStart = successDates[0];
+  let longest = 1, run = 1, 
+      longestStart = successDates[0], 
+      longestEnd = successDates[0], 
+      tempStart = successDates[0],
+      currentEnd = successDates[0];
+
   for (let i = 1; i < successDates.length; i++) {
     const gap = successDates[i].diff(successDates[i-1], "days");
     if (gap <= maxGap) {
       run++;
-      longestEnd = successDates[i];
+      currentEnd = successDates[i]; 
     } else {
       if (run > longest) {
         longest = run;
         longestStart = tempStart;
-        longestEnd = successDates[i-1];
+        longestEnd = currentEnd; 
       }
       run = 1;
       tempStart = successDates[i];
+      currentEnd = successDates[i];
     }
   }
   if (run > longest) {
     longest = run;
     longestStart = tempStart;
-    longestEnd = successDates[successDates.length-1];
+    longestEnd = currentEnd;
   }
 
   // current
