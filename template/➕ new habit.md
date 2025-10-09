@@ -11,7 +11,7 @@ cssclasses:
 
 ````tabs
 
-tab: 📅 تقویم
+---tab 📅 تقویم
 ```contributionGraph
 title: ""
 graphType: default
@@ -65,7 +65,7 @@ cellStyle:
   minHeight: 20px
 
 ```
-tab: 🧮 آمار
+---tab 🧮 آمار
 ```dataview
 table without id
 "🔘 جمع کل: " + round(sum(rows.➕new)) + " مورد" as Total,
@@ -76,7 +76,7 @@ from #journal
 where date >= date("{{اول هفته}}") AND date <= date("{{آخر هفته}}")
 GROUP BY ""
 ```
-tab: 📊 نمودار
+---tab 📊 نمودار
 ``` tracker
 searchType: frontmatter
 searchTarget: ➕new
@@ -100,7 +100,7 @@ bar:
 
 ````tabs
 
-tab: 📅 تقویم
+---tab 📅 تقویم
 ```contributionGraph
 title: ""
 graphType: default
@@ -154,7 +154,7 @@ cellStyle:
   minHeight: 20px
 
 ```
-tab: 🧮 آمار
+---tab 🧮 آمار
 ```dataview
 table without id
 "🔘 جمع کل: " + round(sum(rows.➕new)) + " مورد" as Total,
@@ -165,7 +165,7 @@ from #journal
 where file.name >= ("{{اول ماه}}") AND file.name <= ("{{آخر ماه}}")
 GROUP BY ""
 ```
-tab: 📊 نمودار
+---tab 📊 نمودار
 ``` tracker
 searchType: frontmatter
 searchTarget: ➕new
@@ -189,7 +189,7 @@ bar:
 
 ````tabs
 
-tab: 📅 تقویم
+---tab 📅 تقویم
 ```contributionGraph
 title: ""
 graphType: default
@@ -240,7 +240,7 @@ cellStyle:
 mainContainerStyle:
   backgroundColor: "#ffffff00"
 ```
-tab: 🧮 آمار
+---tab 🧮 آمار
 ```dataview
 table without id
 "🔘 جمع کل: " + round(sum(rows.➕new)) + " مورد" as Total,
@@ -251,7 +251,7 @@ from #journal
 where file.name >= ("{{اول سال}}") AND file.name <= ("{{آخر سال}}")
 GROUP BY ""
 ```
-tab: 📊 نمودار
+---tab 📊 نمودار
 ``` tracker
 searchType: frontmatter
 searchTarget: ➕new

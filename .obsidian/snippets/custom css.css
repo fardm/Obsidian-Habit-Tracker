@@ -9,57 +9,37 @@
     direction: rtl;
 }
 
-/* پلاگین tabs */
-.border-tab .tabs-container {
-    border: 1px solid #9595954d;
-    border-radius: 10px;
-    padding: 5px;   
-}
-
-.border-tab .tabs-nav{
-    border-bottom: 1px solid #9595954d;
-    direction: rtl;
-}
-
-.markdown-source-view.is-readable-line-width .tabs-container {
-    max-width: 100%;
-}
 
 
 /* تب پلاگین html tab */
-/* .block-language-tabs {
-    border: solid 1px;
-    border-radius: 10px;
-    padding: 0 1rem;
-}
 
 .html-tabs {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1rem;
     direction: rtl;
     gap: 1rem;
+    border-color: rgba(139, 139, 139, 0.226);
 }
 
 .ltr-tabs .html-tabs{
     direction: ltr;
     gap: 0rem;
-} */
+}
 
+/* بوردر */
+.tab-border .block-language-tabs {
+    border: solid 1px #8080802d;
+    border-radius: 12px;
+    padding: 0 0.5rem;
+}
 
-
-/* Tabs Plugin */
-    /* بوردر */
-    .tabs-container {
-        border: 1px solid #9595954d;
-        border-radius: 10px;
-        padding: 8px;   
-    }
-    .tabs-nav{
-        border-bottom: 1px solid #9595954d;
-        direction: rtl;
-    }
-
-/* 100 درصد شدن عرص */
+/* زمینه خاکستری */
+.tab-gray .block-language-tabs{
+    background-color: #8080800a;
+    border: solid 1px #8080802d;
+    border-radius: 12px;
+    padding: 0 0.5rem;
+}
 
 
 

@@ -7,9 +7,6 @@ cssclasses:
 
 ## 🏋️ ورزش
 
-````tabs
-tab: 🏋️
-
 ```contributionGraph
 title: " "
 graphType: default
@@ -55,14 +52,13 @@ where date >= date("{{اول هفته}}") AND date <= date("{{آخر هفته}}"
 GROUP BY ""
 ```
 
-````
 
 ‌
 ## 📚 مطالعه
 
 ````tabs
 
-tab: 📅 تقویم
+---tab 📅 تقویم
 ```contributionGraph
 title: ""
 graphType: default
@@ -113,7 +109,7 @@ mainContainerStyle:
 
 ```
 
-tab: 🧮 آمار
+---tab 🧮 آمار
 ```dataview
 table without id
 "🔘 جمع کل: " + round(sum(rows.📚reading)) + " پ" as Total,
@@ -125,7 +121,7 @@ where date >= date("{{اول هفته}}") AND date <= date("{{آخر هفته}}"
 GROUP BY ""
 ```
 
-tab: 📊 نمودار
+---tab 📊 نمودار
 ``` tracker
 searchType: frontmatter
 searchTarget: 📚reading
@@ -148,7 +144,7 @@ bar:
 
 ````tabs
 
-tab: 📅 تقویم
+---tab 📅 تقویم
 ```contributionGraph
 title: ""
 graphType: default
@@ -203,7 +199,7 @@ cellStyle:
 
 ```
 
-tab: 🧮 آمار
+---tab 🧮 آمار
 ```dataview
 table without id
 "🔘 جمع کل: " + round(sum(rows.📱social)) + " ساعت" as Total,
@@ -215,7 +211,7 @@ where date >= date("{{اول هفته}}") AND date <= date("{{آخر هفته}}"
 GROUP BY ""
 ```
 
-tab: 📊 نمودار
+---tab 📊 نمودار
 ``` tracker
 searchType: frontmatter
 searchTarget: 📱social

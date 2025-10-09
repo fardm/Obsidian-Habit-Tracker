@@ -3,5 +3,7 @@
   "rightToLeft": false,
   "promptDelete": false,
   "attachmentFolderPath": "/",
-  "propertiesInDocument": "hidden"
+  "propertiesInDocument": "visible",
+  "foldHeading": true,
+  "foldIndent": true
 }

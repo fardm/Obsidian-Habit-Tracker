@@ -1,8 +1,8 @@
 {
-  "dailyNotesFolderPath": "journal/1404/daily",
-  "weeklyNotesFolderPath": "journal/1404/weekly",
-  "monthlyNotesFolderPath": "journal/1404/monthly",
-  "yearlyNotesFolderPath": "journal/1404",
+  "dailyNotesFolderPath": "journal/0000/daily",
+  "weeklyNotesFolderPath": "journal/0000/weekly",
+  "monthlyNotesFolderPath": "journal/0000/monthly",
+  "yearlyNotesFolderPath": "journal/0000",
   "enableQuarterlyNotes": false,
   "quarterlyNotesFolderPath": "/",
   "dateFormat": "georgian",

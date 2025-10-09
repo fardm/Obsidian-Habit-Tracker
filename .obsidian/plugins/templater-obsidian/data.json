@@ -15,19 +15,19 @@
   "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "journal/1404/daily",
+      "folder": "journal/0000/daily",
       "template": "template/🌞 new day.md"
     },
     {
-      "folder": "journal/1404/monthly",
+      "folder": "journal/0000/monthly",
       "template": "template/🌑 new month.md"
     },
     {
-      "folder": "journal/1404/weekly",
+      "folder": "journal/0000/weekly",
       "template": "template/📅 new week.md"
     },
     {
-      "folder": "journal/1404",
+      "folder": "journal/0000",
       "template": "template/🌏 new year.md"
     }
   ],

@@ -8,7 +8,7 @@ cssclasses:
 ## 🏋️ ورزش
 
 ````tabs
-tab: 📅 تقویم
+---tab 📅 تقویم
 
 ```contributionGraph
 title: " "
@@ -46,7 +46,7 @@ mainContainerStyle:
 ```
 
 
-tab: 🧮 آمار
+---tab 🧮 آمار
 ```dataview
 TABLE 
     "✔ " + length(filter(rows, (r) => r.🏋️exercise = true)) + " روز ورزش کــــردم" as true,
@@ -63,7 +63,7 @@ GROUP BY ""
 
 ````tabs
 
-tab: 📅 تقویم
+---tab 📅 تقویم
 ```contributionGraph
 title: ""
 graphType: default
@@ -111,7 +111,7 @@ mainContainerStyle:
 
 ```
 
-tab: 🧮 آمار
+---tab 🧮 آمار
 ```dataview
 table without id
 "🔘 جمع کل: " + round(sum(rows.📚reading)) + " پ" as Total,
@@ -123,7 +123,7 @@ where file.name >= ("{{اول سال}}") AND file.name <= ("{{آخر سال}}")
 GROUP BY ""
 ```
 
-tab: 📊 نمودار
+---tab 📊 نمودار
 ``` tracker
 searchType: frontmatter
 searchTarget: 📚reading
@@ -146,7 +146,7 @@ bar:
 
 ````tabs
 
-tab: 📅 تقویم
+---tab 📅 تقویم
 ```contributionGraph
 title: ""
 graphType: default
@@ -198,7 +198,7 @@ mainContainerStyle:
   backgroundColor: "#ffffff00"
 ```
 
-tab: 🧮 آمار
+---tab 🧮 آمار
 ```dataview
 table without id
 "🔘 جمع کل: " + round(sum(rows.📱social)) + " ساعت" as Total,
@@ -210,7 +210,7 @@ where file.name >= ("{{اول سال}}") AND file.name <= ("{{آخر سال}}")
 GROUP BY ""
 ```
 
-tab: 📊 نمودار
+---tab 📊 نمودار
 ``` tracker
 searchType: frontmatter
 searchTarget: 📱social

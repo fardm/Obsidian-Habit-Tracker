@@ -20,7 +20,8 @@ const CONFIG = {
       progressMax: null,
       completeCondition: { kind: "eq", value: true },
       chain: { graceDays: 1, cupEvery: 15 },
-      achievement: null
+      achievement: null,
+      lowerIsBetter: false
     },
     {
       id: "reading",
@@ -37,7 +38,8 @@ const CONFIG = {
         { range: [4, 6],   label: "🥈 نقره" },
         { range: [1, 3],   label: "🥉 برنز" },
         { range: [0, 0],   label: "⚪" }
-      ]
+      ],
+      lowerIsBetter: false
     },
     {
       id: "english",
@@ -54,7 +56,8 @@ const CONFIG = {
         { range: [3, 4],   label: "🥈 نقره" },
         { range: [1, 2],   label: "🥉 برنز" },
         { range: [0, 0],   label: "⚪" }
-      ]
+      ],
+      lowerIsBetter: false
     },
     {
       id: "social",
@@ -63,8 +66,8 @@ const CONFIG = {
       type: "numeric",
       unit: "ساعت",
       progressMax: 12,
-      completeCondition: { kind: "lte", value: 3 },
-      chain: null,
+      completeCondition: { kind: "lte", value: 1 },
+      chain: { graceDays: 1, cupEvery: 30 },
       achievement: [
         { range: [0, 0],        label: "🏅 سوپراستار" },
         { range: [0, 1],        label: "🥇 طلا"   },

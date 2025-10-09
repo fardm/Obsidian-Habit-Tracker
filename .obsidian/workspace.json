@@ -15,15 +15,30 @@
               "type": "markdown",
               "state": {
                 "file": "dashboard.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "pinned": true,
               "icon": "lucide-file",
               "title": "dashboard"
             }
+          },
+          {
+            "id": "e8406ef68489e5c0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "dashboard.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "dashboard"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -143,13 +158,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/1404/daily/2025-08-15.md",
+                "file": "template/📅 new week.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025-08-15"
+              "title": "Outline of 📅 new week"
             }
           },
           {
@@ -158,21 +173,14 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "dashboard.md"
+                "file": "template/📅 new week.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for dashboard"
+              "title": "File properties for 📅 new week"
             }
-          }
-        ],
-        "currentTab": 3
-      },
-      {
-        "id": "c2aa53421f6f49c3",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "1fc2bb515d8e32f0",
+            "id": "ea22939015f848db",
             "type": "leaf",
             "state": {
               "type": "persian-calendar",
@@ -181,11 +189,12 @@
               "title": "Persian Calendar"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 379.5
+    "width": 427.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -200,34 +209,35 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "54d8a53a49edb7ff",
+  "active": "e8406ef68489e5c0",
   "lastOpenFiles": [
-    "journal/1404/1404.md",
+    "README.md",
+    "journal/0000/1404.md",
+    "journal/0000/weekly/1404-W30.md",
+    "journal/0000/monthly/1404-07.md",
+    "journal/0000/daily/2025-10-09.md",
     "dashboard.md",
+    "journal/0000/weekly/1404-W29.md",
+    "journal/0000/weekly",
+    "journal/0000/daily/2025-10-06.md",
+    "journal/1404/1404.md",
+    "journal/1404/monthly/1404-07.md",
+    "journal/1404/140004.md",
+    "template/➕ new habit.md",
+    "template/📅 new week.md",
+    "template/🌞 new day.md",
+    "template/🌏 new year.md",
+    "template/🌑 new month.md",
+    "journal/0000/daily/2025-10-07.md",
+    "journal/0000/daily/2025-10-08.md",
+    "journal/1404/daily/2025-07-26.md",
+    "journal/1404/monthly/1404-05.md",
+    "journal/1404/weekly/1404-W22.md",
     "journal/1404/daily/2025-08-16.md",
     "journal/1404/daily/2025-08-17.md",
     "journal/1404/daily/2025-08-18.md",
-    "README.md",
     "README 1.md",
     "Dashboard-Guide.md",
-    "Habit-Tracker-Guide.md",
-    "template/🌏 new year.md",
-    "template/📅 new week.md",
-    "template/➕ new habit.md",
-    "template/🌞 new day.md",
-    "راهنما.md",
-    "template/🌑 new month.md",
-    "journal/1404/weekly/1404-W22.md",
-    "journal/1404/monthly/1404-05.md",
-    "journal/1404/daily/2025-08-11.md",
-    "journal/1404/daily/2025-08-12.md",
-    "journal/1404/daily/2025-08-13.md",
-    "journal/1404/daily/2025-08-15.md",
-    "journal/1404/daily/2025-08-14.md",
-    "journal/1404/daily/2025-07-26.md",
-    "journal/1404/daily/2025-07-27.md",
-    "journal/1404/daily/2025-07-28.md",
-    "journal/1404/daily/2025-07-29.md",
     "zzz",
     "دیتا ویو نوار پیشرفت",
     "Attachments/font/Sahel-VF.ttf",
@@ -236,7 +246,6 @@
     "Attachments/font/Sahel-Bold.ttf",
     "Attachments/font/Sahel-Black.ttf",
     "Attachments/font/Sahel.ttf",
-    "Attachments/font",
-    "Attachments/New folder"
+    "Attachments/font"
   ]
 }
