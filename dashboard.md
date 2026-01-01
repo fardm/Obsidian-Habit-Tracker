@@ -309,18 +309,15 @@ function computeChainsWithDates(successDates, graceDays, cupEvery) {
 }
 
 /* =============== QUERY PAGES WITH FROM =============== */
-let q = dv.pages();
-if (CONFIG.from.tags.length || CONFIG.from.paths.length) {
+let pathSource = CONFIG.from.paths.map(p => `"${p}"`).join(" or ") || "";
+let q = dv.pages(pathSource);
+
+if (CONFIG.from.tags.length) {
   q = q.where(p => {
-    const hasTags = CONFIG.from.tags.length
-      ? CONFIG.from.tags.every(tag => p.file.tags.includes(`#${tag}`))
-      : true;
-    const hasPaths = CONFIG.from.paths.length
-      ? CONFIG.from.paths.some(path => p.file.path.includes(path))
-      : true;
-    return hasTags && hasPaths;
+	return CONFIG.from.tags.every(tag => p.file.tags.includes(`#${tag}`)); 
   });
 }
+
 const allPages = q.array();
 
 const dated = allPages.map(p => {
