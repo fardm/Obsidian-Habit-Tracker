@@ -183,6 +183,94 @@ bar:
 ```
 ````
 
+## فصل
+
+````tabs
+
+---tab 📅 تقویم
+```contributionGraph
+title: ""
+graphType: default
+dateRangeValue: 180
+dateRangeType: FIXED_DATE_RANGE
+startOfWeek: "6"
+showCellRuleIndicators: true
+titleStyle:
+  textAlign: left
+  fontSize: 15px
+  fontWeight: normal
+dataSource:
+  type: PAGE
+  value: "#journal"
+  dateField:
+    type: FILE_NAME
+    value: date
+  countField:
+    type: PAGE_PROPERTY
+    value: ➕new
+fillTheScreen: false
+enableMainContainerShadow: false
+fromDate: {{اول فصل}}
+toDate: {{آخر فصل}}
+cellStyleRules:
+  - id: Ocean_a
+    color: "#c0e1ffff"
+    min: 1
+    max: "2"
+  - id: Ocean_b
+    color: "#5fbfffff"
+    min: "2"
+    max: "3"
+  - id: Ocean_c
+    color: "#0784e4ff"
+    min: "3"
+    max: "4"
+  - id: Ocean_d
+    color: "#0760a9ff"
+    min: "4"
+    max: "5"
+  - id: 1713257815258
+    min: "5"
+    max: "24"
+    color: "#083864ff"
+    text: ""
+mainContainerStyle:
+  backgroundColor: "#ffffff00"
+cellStyle:
+  minWidth: 20px
+  minHeight: 20px
+
+```
+---tab 🧮 آمار
+```dataview
+table without id
+"🔘 جمع کل: " + round(sum(rows.➕new)) + " مورد" as Total,
+"🔺 بیشترین: " + round(max(rows.➕new)) + " مورد" as Maximum,
+"🔻 کمترین: " + round(min(rows.➕new)) + " مورد" as Minimum,
+"📈 میانگین: " + round(sum(rows.➕new) / length(rows), 1) + " مورد" as Average
+from #journal
+where file.name >= ("{{اول فصل}}") AND file.name <= ("{{آخر فصل}}")
+GROUP BY ""
+```
+---tab 📊 نمودار
+``` tracker
+searchType: frontmatter
+searchTarget: ➕new
+startDate: {{اول فصل}}
+endDate: {{آخر فصل}}
+folder: #journal
+aspectRatio: 16:9
+bar:
+    title: " "
+    xAxisLabel: " "
+    yAxisLabel: " "
+	yMin: 8
+	yMax: 0
+	barColor: "#63b2f5"
+```
+````
+
+
 
 
 ## سالانه

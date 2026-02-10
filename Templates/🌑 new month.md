@@ -5,7 +5,11 @@ cssclasses:
   - border-tab
 ---
 
+
+# {{نام ماه یادداشت}}
+
 ## 🏋️ ورزش
+
 
 ```contributionGraph
 title: " "
@@ -29,8 +33,8 @@ dataSource:
     value: 🏋️exercise
 fillTheScreen: false
 enableMainContainerShadow: false
-fromDate: {{اول هفته}}
-toDate: {{آخر هفته}}
+fromDate: {{اول ماه}}
+toDate: {{آخر ماه}}
 cellStyleRules:
   - id: default_b
     color: "#64da7aff"
@@ -46,9 +50,9 @@ mainContainerStyle:
 
 ```dataview
 table without id
-"✅ این هفته: " + length(rows) + " روز ورزش کردم" as Exercise
+"✅ این ماه: " + length(rows) + " روز ورزش کردم" as Exercise
 from #journal
-where date >= date("{{اول هفته}}") AND date <= date("{{آخر هفته}}") And 🏋️exercise
+where file.name >= ("{{اول ماه}}") AND file.name <= ("{{آخر ماه}}") And 🏋️exercise
 GROUP BY ""
 ```
 
@@ -81,8 +85,8 @@ dataSource:
     value: 📚reading
 fillTheScreen: false
 enableMainContainerShadow: false
-fromDate: {{اول هفته}}
-toDate: {{آخر هفته}}
+fromDate: {{اول ماه}}
+toDate: {{آخر ماه}}
 cellStyleRules:
   - id: Halloween_a
     color: "#fdd577"
@@ -117,7 +121,7 @@ table without id
 "🔻 کمترین: " + round(min(rows.📚reading)) + " پ" as Minimum,
 "📈 میانگین: " + round(sum(rows.📚reading) / length(rows), 1) + " پ" as Average
 from #journal
-where date >= date("{{اول هفته}}") AND date <= date("{{آخر هفته}}")
+where file.name >= ("{{اول ماه}}") AND file.name <= ("{{آخر ماه}}")
 GROUP BY ""
 ```
 
@@ -125,8 +129,8 @@ GROUP BY ""
 ``` tracker
 searchType: frontmatter
 searchTarget: 📚reading
-startDate: {{اول هفته}}
-endDate: {{آخر هفته}}
+startDate: {{اول ماه}}
+endDate: {{آخر ماه}}
 folder: #journal
 aspectRatio: 16:9
 bar:
@@ -167,8 +171,8 @@ dataSource:
     value: 📱social
 fillTheScreen: false
 enableMainContainerShadow: false
-fromDate: {{اول هفته}}
-toDate: {{آخر هفته}}
+fromDate: {{اول ماه}}
+toDate: {{آخر ماه}}
 cellStyleRules:
   - id: Ocean_a
     color: "#c0e1ffff"
@@ -207,7 +211,7 @@ table without id
 "🔻 کمترین: " + round(min(rows.📱social)) + " ساعت" as Minimum,
 "📈 میانگین: " + round(sum(rows.📱social) / length(rows), 1) + " ساعت" as Average
 from #journal
-where date >= date("{{اول هفته}}") AND date <= date("{{آخر هفته}}")
+where file.name >= ("{{اول ماه}}") AND file.name <= ("{{آخر ماه}}")
 GROUP BY ""
 ```
 
@@ -215,8 +219,8 @@ GROUP BY ""
 ``` tracker
 searchType: frontmatter
 searchTarget: 📱social
-startDate: {{اول هفته}}
-endDate: {{آخر هفته}}
+startDate: {{اول ماه}}
+endDate: {{آخر ماه}}
 folder: #journal
 aspectRatio: 16:9
 bar:
@@ -228,6 +232,5 @@ bar:
 	barColor: "#63b2f5"
 ```
 ````
-
 
 

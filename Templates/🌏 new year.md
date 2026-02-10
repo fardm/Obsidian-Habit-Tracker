@@ -7,6 +7,8 @@ cssclasses:
 
 ## 🏋️ ورزش
 
+````tabs
+---tab 📅 تقویم
 
 ```contributionGraph
 title: " "
@@ -28,31 +30,35 @@ dataSource:
   countField:
     type: PAGE_PROPERTY
     value: 🏋️exercise
-fillTheScreen: false
+fillTheScreen: true
 enableMainContainerShadow: false
-fromDate: {{اول ماه}}
-toDate: {{آخر ماه}}
+fromDate: {{اول سال}}
+toDate: {{آخر سال}}
 cellStyleRules:
   - id: default_b
     color: "#64da7aff"
     min: 1
     max: 2
 cellStyle:
-  minWidth: 20px
-  minHeight: 20px
+  borderRadius: ""
+  minWidth: 12px
+  minHeight: 12px
 mainContainerStyle:
-  backgroundColor: "#ffffff00"
+  backgroundColor: "#00000000"
 ```
 
 
+---tab 🧮 آمار
 ```dataview
-table without id
-"✅ این ماه: " + length(rows) + " روز ورزش کردم" as Exercise
-from #journal
-where file.name >= ("{{اول ماه}}") AND file.name <= ("{{آخر ماه}}") And 🏋️exercise
+TABLE 
+    "✔ " + length(filter(rows, (r) => r.🏋️exercise = true)) + " روز ورزش کــــردم" as true,
+    "❌ " + length(filter(rows, (r) => r.🏋️exercise = false)) + " روز ورزش نکردم" as false
+FROM #journal
+WHERE file.name >= ("{{اول سال}}") AND file.name <= ("{{آخر سال}}")
 GROUP BY ""
 ```
 
+````
 
 ‌
 ## 📚 مطالعه
@@ -63,7 +69,7 @@ GROUP BY ""
 ```contributionGraph
 title: ""
 graphType: default
-dateRangeValue: 30
+dateRangeValue: 180
 dateRangeType: FIXED_DATE_RANGE
 startOfWeek: "6"
 showCellRuleIndicators: true
@@ -80,10 +86,10 @@ dataSource:
   countField:
     type: PAGE_PROPERTY
     value: 📚reading
-fillTheScreen: false
+fillTheScreen: true
 enableMainContainerShadow: false
-fromDate: {{اول ماه}}
-toDate: {{آخر ماه}}
+fromDate: {{اول سال}}
+toDate: {{آخر سال}}
 cellStyleRules:
   - id: Halloween_a
     color: "#fdd577"
@@ -100,11 +106,10 @@ cellStyleRules:
   - id: Halloween_d
     color: "#d94e49"
     min: "15"
-    max: 9999
+    max: "999"
 cellStyle:
-  minWidth: 20px
-  minHeight: 20px
-  borderRadius: ""
+  minWidth: 12px
+  minHeight: 12px
 mainContainerStyle:
   backgroundColor: "#ffffff00"
 
@@ -118,7 +123,7 @@ table without id
 "🔻 کمترین: " + round(min(rows.📚reading)) + " پ" as Minimum,
 "📈 میانگین: " + round(sum(rows.📚reading) / length(rows), 1) + " پ" as Average
 from #journal
-where file.name >= ("{{اول ماه}}") AND file.name <= ("{{آخر ماه}}")
+where file.name >= ("{{اول سال}}") AND file.name <= ("{{آخر سال}}")
 GROUP BY ""
 ```
 
@@ -126,21 +131,21 @@ GROUP BY ""
 ``` tracker
 searchType: frontmatter
 searchTarget: 📚reading
-startDate: {{اول ماه}}
-endDate: {{آخر ماه}}
+startDate: {{اول سال}}
+endDate: {{آخر سال}}
 folder: #journal
-aspectRatio: 16:9
+aspectRatio: 18:9
 bar:
     title: " "
     xAxisLabel: " "
     yAxisLabel: " "
-	yMin: 18
+	yMin: 20
 	yMax: 0
 	barColor: "#ffa43d"
 ```
 ````
 
-‌
+‌‌ ‌
 ## 📱 سوشال مدیا
 
 ````tabs
@@ -166,10 +171,10 @@ dataSource:
   countField:
     type: PAGE_PROPERTY
     value: 📱social
-fillTheScreen: false
+fillTheScreen: true
 enableMainContainerShadow: false
-fromDate: {{اول ماه}}
-toDate: {{آخر ماه}}
+fromDate: {{اول سال}}
+toDate: {{آخر سال}}
 cellStyleRules:
   - id: Ocean_a
     color: "#c0e1ffff"
@@ -192,12 +197,11 @@ cellStyleRules:
     max: "24"
     color: "#083864ff"
     text: ""
+cellStyle:
+  minWidth: 12px
+  minHeight: 12px
 mainContainerStyle:
   backgroundColor: "#ffffff00"
-cellStyle:
-  minWidth: 20px
-  minHeight: 20px
-
 ```
 
 ---tab 🧮 آمار
@@ -208,7 +212,7 @@ table without id
 "🔻 کمترین: " + round(min(rows.📱social)) + " ساعت" as Minimum,
 "📈 میانگین: " + round(sum(rows.📱social) / length(rows), 1) + " ساعت" as Average
 from #journal
-where file.name >= ("{{اول ماه}}") AND file.name <= ("{{آخر ماه}}")
+where file.name >= ("{{اول سال}}") AND file.name <= ("{{آخر سال}}")
 GROUP BY ""
 ```
 
@@ -216,10 +220,10 @@ GROUP BY ""
 ``` tracker
 searchType: frontmatter
 searchTarget: 📱social
-startDate: {{اول ماه}}
-endDate: {{آخر ماه}}
+startDate: {{اول سال}}
+endDate: {{آخر سال}}
 folder: #journal
-aspectRatio: 16:9
+aspectRatio: 18:9
 bar:
     title: " "
     xAxisLabel: " "
@@ -229,5 +233,4 @@ bar:
 	barColor: "#63b2f5"
 ```
 ````
-
 
