@@ -22,23 +22,8 @@
               "icon": "lucide-file",
               "title": "dashboard"
             }
-          },
-          {
-            "id": "7d36c03b21224e68",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "README"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -125,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "dashboard.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +120,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks for dashboard"
             }
           },
           {
@@ -144,12 +129,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "dashboard.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from README"
+              "title": "Outgoing links from dashboard"
             }
           },
           {
@@ -158,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "dashboard.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of dashboard"
             }
           },
           {
@@ -173,14 +158,14 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "README.md"
+                "file": "Templates/➕ new habit.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for README"
+              "title": "File properties for ➕ new habit"
             }
           },
           {
-            "id": "a964293759947853",
+            "id": "28afee3536b2b4c3",
             "type": "leaf",
             "state": {
               "type": "persian-calendar",
@@ -190,7 +175,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -207,23 +192,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7d36c03b21224e68",
+  "active": "6ff19b9f33c6d328",
   "lastOpenFiles": [
-    "Templates/🌞 new day.md",
-    "README.md",
-    "dashboard.md",
-    "Templates/🌑 new month.md",
     "Templates/🌏 new year.md",
+    "Templates/🌑 new month.md",
+    "Templates/🍂 new season.md",
+    "Templates/🌞 new day.md",
+    "Journal/1404/روزنوشت/2026-02-10.md",
+    "Journal/1404/روزنوشت/2026-02-11.md",
+    "dashboard.md",
+    "Journal/1404/روزنوشت",
+    "Journal/1404",
+    "Journal/1404/1404.md",
+    "Journal/1404/ماه‌نوشت/1404-11.md",
+    "Journal/1404/فصل‌نوشت/1404-S4.md",
+    "Journal/1404/ماه‌نوشت",
+    "Journal/1404/هفته‌نوشت/1404-W48.md",
+    "Journal/1404/فصل‌نوشت",
+    "Journal/1404/هفته‌نوشت",
+    "README.md",
     "Templates/➕ new habit.md",
     "dashboard 1 - بهبود مسیر دهی.md",
     "عبارت معنا دار.md",
     "Templates/📅 new week.md",
-    "Templates/🍂 new season.md",
-    "Journal/1404/1404.md",
-    "Journal/1404/هفته‌نوشت/1404-W48.md",
-    "Journal/1404/هفته‌نوشت",
-    "Journal/1404/فصل‌نوشت/1404-S4.md",
-    "Journal/1404/فصل‌نوشت",
     "Untitled.md",
     "Journal/1404/ماه‌نوشت/1404-12.md",
     "Journal/1404/فصل‌نوشت/1404-S3.md",
@@ -234,13 +225,7 @@
     "Journal/1404/روزنوشت/2026-01-01.md",
     "Journal/1404/روزنوشت/2025-12-31.md",
     "Journal/1404/روزنوشت/2025-12-30.md",
-    "Journal/1404/روزنوشت/2025-12-29.md",
-    "Journal/1404/روزنوشت/2025-12-28.md",
-    "Journal/1404/روزنوشت/2025-12-27.md",
     "Journal/1405",
-    "Journal/1404/ماه‌نوشت",
-    "Journal/1404/روزنوشت",
-    "Journal/1404",
     "Journal/1405/روزنوشت",
     "Untitled",
     "journal/2026",
