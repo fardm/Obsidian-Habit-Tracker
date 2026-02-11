@@ -4,8 +4,8 @@ cssclasses:
   - cards
   - rtl-dataview
 ---
-عادت: {{habit_name}}
-واحد مقدار: {{habit_unit}}
+عادت: {{name}}
+واحد مقدار: {{unit}}
 
 
 
@@ -33,7 +33,7 @@ dataSource:
     value: date
   countField:
     type: PAGE_PROPERTY
-    value: {{habit_name}}
+    value: {{name}}
 fillTheScreen: false
 enableMainContainerShadow: false
 fromDate: {{اول هفته}}
@@ -70,10 +70,10 @@ cellStyle:
 ---tab 🧮 آمار
 ```dataview
 table without id
-"🔘 جمع کل: " + round(sum(rows.{{habit_name}})) + " {{habit_unit}}" as Total,
-"🔺 بیشترین: " + round(max(rows.{{habit_name}})) + " {{habit_unit}}" as Maximum,
-"🔻 کمترین: " + round(min(rows.{{habit_name}})) + " {{habit_unit}}" as Minimum,
-"📈 میانگین: " + round(sum(rows.{{habit_name}}) / length(rows), 1) + " {{habit_unit}}" as Average
+"🔘 جمع کل: " + round(sum(rows.{{name}})) + " {{unit}}" as Total,
+"🔺 بیشترین: " + round(max(rows.{{name}})) + " {{unit}}" as Maximum,
+"🔻 کمترین: " + round(min(rows.{{name}})) + " {{unit}}" as Minimum,
+"📈 میانگین: " + round(sum(rows.{{name}}) / length(rows), 1) + " {{unit}}" as Average
 from #journal
 where date >= date("{{اول هفته}}") AND date <= date("{{آخر هفته}}")
 GROUP BY ""
@@ -81,7 +81,7 @@ GROUP BY ""
 ---tab 📊 نمودار
 ``` tracker
 searchType: frontmatter
-searchTarget: {{habit_name}}
+searchTarget: {{name}}
 startDate: {{اول هفته}}
 endDate: {{آخر هفته}}
 folder: #journal
@@ -122,7 +122,7 @@ dataSource:
     value: date
   countField:
     type: PAGE_PROPERTY
-    value: {{habit_name}}
+    value: {{name}}
 fillTheScreen: false
 enableMainContainerShadow: false
 fromDate: {{اول ماه}}
@@ -159,10 +159,10 @@ cellStyle:
 ---tab 🧮 آمار
 ```dataview
 table without id
-"🔘 جمع کل: " + round(sum(rows.{{habit_name}})) + " {{habit_unit}}" as Total,
-"🔺 بیشترین: " + round(max(rows.{{habit_name}})) + " {{habit_unit}}" as Maximum,
-"🔻 کمترین: " + round(min(rows.{{habit_name}})) + " {{habit_unit}}" as Minimum,
-"📈 میانگین: " + round(sum(rows.{{habit_name}}) / length(rows), 1) + " {{habit_unit}}" as Average
+"🔘 جمع کل: " + round(sum(rows.{{name}})) + " {{unit}}" as Total,
+"🔺 بیشترین: " + round(max(rows.{{name}})) + " {{unit}}" as Maximum,
+"🔻 کمترین: " + round(min(rows.{{name}})) + " {{unit}}" as Minimum,
+"📈 میانگین: " + round(sum(rows.{{name}}) / length(rows), 1) + " {{unit}}" as Average
 from #journal
 where file.name >= ("{{اول ماه}}") AND file.name <= ("{{آخر ماه}}")
 GROUP BY ""
@@ -170,7 +170,7 @@ GROUP BY ""
 ---tab 📊 نمودار
 ``` tracker
 searchType: frontmatter
-searchTarget: {{habit_name}}
+searchTarget: {{name}}
 startDate: {{اول ماه}}
 endDate: {{آخر ماه}}
 folder: #journal
@@ -209,7 +209,7 @@ dataSource:
     value: date
   countField:
     type: PAGE_PROPERTY
-    value: {{habit_name}}
+    value: {{name}}
 fillTheScreen: false
 enableMainContainerShadow: false
 fromDate: {{اول فصل}}
@@ -246,10 +246,10 @@ cellStyle:
 ---tab 🧮 آمار
 ```dataview
 table without id
-"🔘 جمع کل: " + round(sum(rows.{{habit_name}})) + " {{habit_unit}}" as Total,
-"🔺 بیشترین: " + round(max(rows.{{habit_name}})) + " {{habit_unit}}" as Maximum,
-"🔻 کمترین: " + round(min(rows.{{habit_name}})) + " {{habit_unit}}" as Minimum,
-"📈 میانگین: " + round(sum(rows.{{habit_name}}) / length(rows), 1) + " {{habit_unit}}" as Average
+"🔘 جمع کل: " + round(sum(rows.{{name}})) + " {{unit}}" as Total,
+"🔺 بیشترین: " + round(max(rows.{{name}})) + " {{unit}}" as Maximum,
+"🔻 کمترین: " + round(min(rows.{{name}})) + " {{unit}}" as Minimum,
+"📈 میانگین: " + round(sum(rows.{{name}}) / length(rows), 1) + " {{unit}}" as Average
 from #journal
 where file.name >= ("{{اول فصل}}") AND file.name <= ("{{آخر فصل}}")
 GROUP BY ""
@@ -257,7 +257,7 @@ GROUP BY ""
 ---tab 📊 نمودار
 ``` tracker
 searchType: frontmatter
-searchTarget: {{habit_name}}
+searchTarget: {{name}}
 startDate: {{اول فصل}}
 endDate: {{آخر فصل}}
 folder: #journal
@@ -299,7 +299,7 @@ dataSource:
     value: date
   countField:
     type: PAGE_PROPERTY
-    value: {{habit_name}}
+    value: {{name}}
 fillTheScreen: true
 enableMainContainerShadow: false
 fromDate: {{اول سال}}
@@ -335,10 +335,10 @@ mainContainerStyle:
 ---tab 🧮 آمار
 ```dataview
 table without id
-"🔘 جمع کل: " + round(sum(rows.{{habit_name}})) + " {{habit_unit}}" as Total,
-"🔺 بیشترین: " + round(max(rows.{{habit_name}})) + " {{habit_unit}}" as Maximum,
-"🔻 کمترین: " + round(min(rows.{{habit_name}})) + " {{habit_unit}}" as Minimum,
-"📈 میانگین: " + round(sum(rows.{{habit_name}}) / length(rows), 1) + " {{habit_unit}}" as Average
+"🔘 جمع کل: " + round(sum(rows.{{name}})) + " {{unit}}" as Total,
+"🔺 بیشترین: " + round(max(rows.{{name}})) + " {{unit}}" as Maximum,
+"🔻 کمترین: " + round(min(rows.{{name}})) + " {{unit}}" as Minimum,
+"📈 میانگین: " + round(sum(rows.{{name}}) / length(rows), 1) + " {{unit}}" as Average
 from #journal
 where file.name >= ("{{اول سال}}") AND file.name <= ("{{آخر سال}}")
 GROUP BY ""
@@ -346,7 +346,7 @@ GROUP BY ""
 ---tab 📊 نمودار
 ``` tracker
 searchType: frontmatter
-searchTarget: {{habit_name}}
+searchTarget: {{name}}
 startDate: {{اول سال}}
 endDate: {{آخر سال}}
 folder: #journal

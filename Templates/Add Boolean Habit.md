@@ -4,7 +4,7 @@ cssclasses:
   - cards
   - rtl-dataview
 ---
-عادت: {{habit_name}}
+عادت: {{name}}
 
 
 
@@ -30,7 +30,7 @@ dataSource:
     value: date
   countField:
     type: PAGE_PROPERTY
-    value: {{habit_name}}
+    value: {{name}}
 fillTheScreen: false
 enableMainContainerShadow: false
 fromDate: {{اول هفته}}
@@ -67,8 +67,8 @@ cellStyle:
 
 ```dataview
 TABLE 
-    "✅ " + length(filter(rows, (r) => r.{{habit_name}} = true)) + " روز انجام شد" as true,
-    "❌ " + length(filter(rows, (r) => r.{{habit_name}} = false)) + " روز انجام نشد" as false
+    "✅ " + length(filter(rows, (r) => r.{{name}} = true)) + " روز انجام شد" as true,
+    "❌ " + length(filter(rows, (r) => r.{{name}} = false)) + " روز انجام نشد" as false
 FROM #journal
 WHERE file.name >= ("{{اول هفته}}") AND file.name <= ("{{آخر هفته}}")
 GROUP BY ""
@@ -99,7 +99,7 @@ dataSource:
     value: date
   countField:
     type: PAGE_PROPERTY
-    value: {{habit_name}}
+    value: {{name}}
 fillTheScreen: false
 enableMainContainerShadow: false
 fromDate: {{اول ماه}}
@@ -118,8 +118,8 @@ mainContainerStyle:
 
 ```dataview
 TABLE 
-    "✅ " + length(filter(rows, (r) => r.{{habit_name}} = true)) + " روز انجام شد" as true,
-    "❌ " + length(filter(rows, (r) => r.{{habit_name}} = false)) + " روز انجام نشد" as false
+    "✅ " + length(filter(rows, (r) => r.{{name}} = true)) + " روز انجام شد" as true,
+    "❌ " + length(filter(rows, (r) => r.{{name}} = false)) + " روز انجام نشد" as false
 FROM #journal
 WHERE file.name >= ("{{اول ماه}}") AND file.name <= ("{{آخر ماه}}")
 GROUP BY ""
@@ -151,7 +151,7 @@ dataSource:
     value: date
   countField:
     type: PAGE_PROPERTY
-    value: {{habit_name}}
+    value: {{name}}
 fillTheScreen: false
 enableMainContainerShadow: false
 fromDate: {{اول فصل}}
@@ -170,8 +170,8 @@ mainContainerStyle:
 
 ```dataview
 TABLE 
-    "✅ " + length(filter(rows, (r) => r.{{habit_name}} = true)) + " روز انجام شد" as true,
-    "❌ " + length(filter(rows, (r) => r.{{habit_name}} = false)) + " روز انجام نشد" as false
+    "✅ " + length(filter(rows, (r) => r.{{name}} = true)) + " روز انجام شد" as true,
+    "❌ " + length(filter(rows, (r) => r.{{name}} = false)) + " روز انجام نشد" as false
 FROM #journal
 WHERE file.name >= ("{{اول فصل}}") AND file.name <= ("{{آخر فصل}}")
 GROUP BY ""
@@ -204,7 +204,7 @@ dataSource:
     value: date
   countField:
     type: PAGE_PROPERTY
-    value: {{habit_name}}
+    value: {{name}}
 fillTheScreen: true
 enableMainContainerShadow: false
 fromDate: {{اول سال}}
@@ -224,8 +224,8 @@ mainContainerStyle:
 
 ```dataview
 TABLE 
-    "✅ " + length(filter(rows, (r) => r.{{habit_name}} = true)) + " روز انجام شد" as true,
-    "❌ " + length(filter(rows, (r) => r.{{habit_name}} = false)) + " روز انجام نشد" as false
+    "✅ " + length(filter(rows, (r) => r.{{name}} = true)) + " روز انجام شد" as true,
+    "❌ " + length(filter(rows, (r) => r.{{name}} = false)) + " روز انجام نشد" as false
 FROM #journal
 WHERE file.name >= ("{{اول سال}}") AND file.name <= ("{{آخر سال}}")
 GROUP BY ""

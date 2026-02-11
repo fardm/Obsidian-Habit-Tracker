@@ -158,10 +158,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "README.md"
+                "file": "dashboard.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for README"
+              "title": "File properties for dashboard"
             }
           },
           {
@@ -192,17 +192,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6ff19b9f33c6d328",
+  "active": "54d8a53a49edb7ff",
   "lastOpenFiles": [
-    "Templates/Add Numeric Habit.md",
-    "Templates/Add Boolean Habit.md",
     "README.md",
+    "Templates/Add Boolean Habit.md",
+    "Templates/Add Numeric Habit.md",
+    "Templates/Daily.md",
     "dashboard.md",
     "Templates/Yearly.md",
     "Templates/Weekly.md",
     "Templates/Quarterly.md",
     "Templates/Monthly.md",
-    "Templates/Daily.md",
     "Journal/1404/1404.md",
     "Journal/1404",
     "Journal/1404/فصل‌نوشت/1404-S4.md",
