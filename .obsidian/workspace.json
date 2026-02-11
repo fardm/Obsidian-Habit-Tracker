@@ -158,14 +158,14 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "dashboard.md"
+                "file": "Journal/1404/1404.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for dashboard"
+              "title": "File properties for 1404"
             }
           },
           {
-            "id": "28afee3536b2b4c3",
+            "id": "8ab3fa235ab3a56c",
             "type": "leaf",
             "state": {
               "type": "persian-calendar",
@@ -192,27 +192,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "54d8a53a49edb7ff",
+  "active": "6ff19b9f33c6d328",
   "lastOpenFiles": [
-    "README.md",
+    "Journal/1404/ماه‌نوشت/1404-11.md",
+    "Journal/1404/فصل‌نوشت/1404-S4.md",
+    "Journal/1404/1404.md",
+    "Journal/1404/فصل‌نوشت",
+    "Journal/1404/هفته‌نوشت/1404-W47.md",
+    "Journal/1404/ماه‌نوشت",
+    "Journal/1404/هفته‌نوشت/1404-W48.md",
+    "Journal/1404/روزنوشت/2026-02-12.md",
+    "Journal/1404/هفته‌نوشت",
+    "Journal/1404/روزنوشت/2026-02-11.md",
     "dashboard.md",
-    "Templates/Add Boolean Habit.md",
+    "Journal/1404/روزنوشت",
+    "Journal/1404",
     "Templates/Add Numeric Habit.md",
     "Templates/Daily.md",
     "Templates/Yearly.md",
     "Templates/Weekly.md",
     "Templates/Quarterly.md",
     "Templates/Monthly.md",
-    "Journal/1404/1404.md",
-    "Journal/1404",
-    "Journal/1404/فصل‌نوشت/1404-S4.md",
-    "Journal/1404/هفته‌نوشت/1404-W48.md",
-    "Journal/1404/فصل‌نوشت",
-    "Journal/1404/ماه‌نوشت/1404-11.md",
-    "Journal/1404/هفته‌نوشت",
-    "Journal/1404/ماه‌نوشت",
+    "README.md",
+    "Templates/Add Boolean Habit.md",
     "Templates/Add Boolean Habit 1.md",
-    "Journal/1404/هفته‌نوشت/1404-W47.md",
     "Journal/1404/روزنوشت/2026-02-06.md",
     "Journal/1404/روزنوشت/2026-02-05.md",
     "Journal/1404/روزنوشت/2026-02-04.md",
@@ -221,10 +224,6 @@
     "Journal/1404/روزنوشت/2026-02-01.md",
     "Journal/1404/روزنوشت/2026-01-31.md",
     "Journal/1404/روزنوشت/2026-02-10.md",
-    "Journal/1404/روزنوشت/2026-02-11.md",
-    "Journal/1404/فصل‌نوشت/1404-S3.md",
-    "Templates/Add Habit 1.md",
-    "Journal/1404/روزنوشت",
     "Journal/1405",
     "Journal/1405/روزنوشت",
     "Untitled",
