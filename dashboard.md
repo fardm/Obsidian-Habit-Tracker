@@ -44,7 +44,7 @@ const CONFIG = {
     {
       id: "english",
       title: "🌎 یادگیری زبان",
-      field: "🌎en",
+      field: "🌎english",
       type: "numeric",
       unit: "پومودورو",
       progressMax: 8,

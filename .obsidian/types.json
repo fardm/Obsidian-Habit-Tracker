@@ -5,6 +5,8 @@
     "tags": "tags",
     "📱social": "number",
     "📚reading": "number",
-    "🌎en": "number"
+    "🌎en": "number",
+    "testw": "checkbox",
+    "writing": "checkbox"
   }
 }

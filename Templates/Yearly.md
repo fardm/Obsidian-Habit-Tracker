@@ -7,8 +7,6 @@ cssclasses:
 
 ## 🏋️ ورزش
 
-````tabs
----tab 📅 تقویم
 
 ```contributionGraph
 title: " "
@@ -47,18 +45,15 @@ mainContainerStyle:
   backgroundColor: "#00000000"
 ```
 
-
----tab 🧮 آمار
 ```dataview
 TABLE 
-    "✔ " + length(filter(rows, (r) => r.🏋️exercise = true)) + " روز ورزش کــــردم" as true,
-    "❌ " + length(filter(rows, (r) => r.🏋️exercise = false)) + " روز ورزش نکردم" as false
+    "🏋️ " + length(filter(rows, (r) => r.🏋️exercise = true)) + " روز ورزش کــــردم" as true,
+    "🛌 " + length(filter(rows, (r) => r.🏋️exercise = false)) + " روز استراحت کردم" as false
 FROM #journal
 WHERE file.name >= ("{{اول سال}}") AND file.name <= ("{{آخر سال}}")
 GROUP BY ""
 ```
 
-````
 
 ‌
 ## 📚 مطالعه
@@ -118,10 +113,10 @@ mainContainerStyle:
 ---tab 🧮 آمار
 ```dataview
 table without id
-"🔘 جمع کل: " + round(sum(rows.📚reading)) + " پ" as Total,
-"🔺 بیشترین: " + round(max(rows.📚reading)) + " پ" as Maximum,
-"🔻 کمترین: " + round(min(rows.📚reading)) + " پ" as Minimum,
-"📈 میانگین: " + round(sum(rows.📚reading) / length(rows), 1) + " پ" as Average
+"🔘 جمع کل: " + round(sum(rows.📚reading)) + " پومودورو" as Total,
+"🔺 بیشترین: " + round(max(rows.📚reading)) + " پومودورو" as Maximum,
+"🔻 کمترین: " + round(min(rows.📚reading)) + " پومودورو" as Minimum,
+"📈 میانگین: " + round(sum(rows.📚reading) / length(rows), 1) + " پومودورو" as Average
 from #journal
 where file.name >= ("{{اول سال}}") AND file.name <= ("{{آخر سال}}")
 GROUP BY ""
@@ -144,6 +139,95 @@ bar:
 	barColor: "#ffa43d"
 ```
 ````
+
+
+## 🌎 یادگیری زبان
+
+````tabs
+
+---tab 📅 تقویم
+```contributionGraph
+title: ""
+graphType: default
+dateRangeValue: 180
+dateRangeType: FIXED_DATE_RANGE
+startOfWeek: "6"
+showCellRuleIndicators: true
+titleStyle:
+  textAlign: left
+  fontSize: 15px
+  fontWeight: normal
+dataSource:
+  type: PAGE
+  value: "#journal"
+  dateField:
+    type: FILE_NAME
+    value: date
+  countField:
+    type: PAGE_PROPERTY
+    value: 🌎english
+fillTheScreen: true
+enableMainContainerShadow: false
+fromDate: {{اول سال}}
+toDate: {{آخر سال}}
+cellStyleRules:
+  - id: Ocean_a
+    color: "#c0e1ffff"
+    min: 1
+    max: "2"
+  - id: Ocean_b
+    color: "#5fbfffff"
+    min: "2"
+    max: "3"
+  - id: Ocean_c
+    color: "#0784e4ff"
+    min: "3"
+    max: "4"
+  - id: Ocean_d
+    color: "#0760a9ff"
+    min: "4"
+    max: "5"
+  - id: 1713257815258
+    min: "5"
+    max: "24"
+    color: "#083864ff"
+    text: ""
+cellStyle:
+  minWidth: 12px
+  minHeight: 12px
+mainContainerStyle:
+  backgroundColor: "#ffffff00"
+```
+---tab 🧮 آمار
+```dataview
+table without id
+"🔘 جمع کل: " + round(sum(rows.🌎english)) + " مورد" as Total,
+"🔺 بیشترین: " + round(max(rows.🌎english)) + " مورد" as Maximum,
+"🔻 کمترین: " + round(min(rows.🌎english)) + " مورد" as Minimum,
+"📈 میانگین: " + round(sum(rows.🌎english) / length(rows), 1) + " مورد" as Average
+from #journal
+where file.name >= ("{{اول سال}}") AND file.name <= ("{{آخر سال}}")
+GROUP BY ""
+```
+---tab 📊 نمودار
+``` tracker
+searchType: frontmatter
+searchTarget: 🌎english
+startDate: {{اول سال}}
+endDate: {{آخر سال}}
+folder: #journal
+aspectRatio: 18:9
+bar:
+    title: " "
+    xAxisLabel: " "
+    yAxisLabel: " "
+	yMin: 8
+	yMax: 0
+	barColor: "#63b2f5"
+```
+````
+
+
 
 ‌‌ ‌
 ## 📱 سوشال مدیا
@@ -233,4 +317,3 @@ bar:
 	barColor: "#63b2f5"
 ```
 ````
-
