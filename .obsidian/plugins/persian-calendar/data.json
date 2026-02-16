@@ -2,6 +2,7 @@
   "versionUpdate": true,
   "dateFormat": "gregorian",
   "askForCreateNote": false,
+  "openDailyNoteOnStartup": false,
   "showSeasonalNotes": true,
   "showHolidays": true,
   "weekendDays": "friday",
@@ -21,5 +22,5 @@
   "showIRAncientEvents": false,
   "showIRIslamEvents": false,
   "showGlobalEvents": false,
-  "lastSeenVersion": "4.2.2"
+  "lastSeenVersion": "4.3.0"
 }
