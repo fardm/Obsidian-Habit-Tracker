@@ -1,9 +1,9 @@
 {
   "accentColor": "",
   "cssTheme": "Minimal",
-  "interfaceFontFamily": "Sahel",
-  "textFontFamily": "Sahel",
-  "monospaceFontFamily": "Sahel",
+  "interfaceFontFamily": "Persian Calendar", /* فونت ساحل - صابر راستی کردار */
+  "textFontFamily": "Persian Calendar", /* فونت ساحل - صابر راستی کردار */
+  "monospaceFontFamily": "Persian Calendar", /* فونت ساحل - صابر راستی کردار */
   "baseFontSize": 18,
   "enabledCssSnippets": [
     "My Edit",
