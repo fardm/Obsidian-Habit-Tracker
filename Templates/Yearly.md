@@ -2,7 +2,6 @@
 cssclasses:
   - cards
   - rtl-dataview
-  - border-tab
 ---
 
 ## 🏋️ ورزش

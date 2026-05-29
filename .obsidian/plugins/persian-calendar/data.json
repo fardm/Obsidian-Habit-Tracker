@@ -1,11 +1,13 @@
 {
   "versionUpdate": true,
+  "language": "fa",
   "dateFormat": "gregorian",
   "askForCreateNote": false,
   "openDailyNoteOnStartup": false,
   "showSeasonalNotes": true,
   "showHolidays": true,
   "weekendDays": "friday",
+  "hijriBase": "iran",
   "showGeorgianDates": true,
   "showHijriDates": false,
   "dailyNotesPath": "Journal/jYYYY/روزنوشت",
@@ -18,9 +20,13 @@
   "monthlyTemplatePath": "Templates/Monthly.md",
   "seasonalTemplatePath": "Templates/Quarterly.md",
   "yearlyTemplatePath": "Templates/Yearly.md",
-  "showIRGovernmentEvents": false,
+  "showIROfficialEvents": true,
+  "showIRHistoricalEvents": true,
   "showIRAncientEvents": false,
-  "showIRIslamEvents": false,
   "showGlobalEvents": false,
-  "lastSeenVersion": "4.3.0"
+  "showShiaEvents": false,
+  "showSunniEvents": false,
+  "showIRGovernmentEvents": false,
+  "showIRIslamEvents": false,
+  "lastSeenVersion": "4.5.8"
 }

@@ -1,17 +1,23 @@
-/* راستچین برای پلاگین دیتاویو */
+/* Dataview Plugin --------------------------------------- */
+
 .rtl-dataview .block-language-dataview {
     direction: rtl;
     text-align-last: center;
 }
 
-/* راستچین برای پلاگین ترکر */
+.cards table.dataview tbody>tr>td {
+    border: none !important;
+}
+
+
+/* Tracker Plugin --------------------------------------- */
 .rtl-tracker .block-language-tracker {
     direction: rtl;
 }
 
 
 
-/* تب پلاگین html tab */
+/* tab ----------------------------------------------- */
 
 .html-tabs {
     font-size: 1rem;
@@ -39,6 +45,39 @@
     border: solid 1px #8080802d;
     border-radius: 12px;
     padding: 0 0.5rem;
+}
+
+
+/* Callout Grid Layouts ----------------------------------- */
+.overview .callout[data-callout="grid4"],
+.overview .callout[data-callout="grid3"] {
+    background-color: transparent;
+    padding: 0;
+
+    & .callout-content {
+        display: grid;
+        column-gap: 20px;
+        justify-items: center;
+    }
+
+    & .callout-title {
+        display: none;
+    }
+}
+
+.overview .callout[data-callout="grid4"] .callout-content {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.overview .callout[data-callout="grid3"] .callout-content {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 480px) {
+    .overview .callout[data-callout="grid4"] .callout-content,
+    .overview .callout[data-callout="grid3"] .callout-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
