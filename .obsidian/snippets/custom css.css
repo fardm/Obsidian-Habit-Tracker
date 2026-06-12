@@ -49,8 +49,7 @@
 
 
 /* Callout Grid Layouts ----------------------------------- */
-.overview .callout[data-callout="grid4"],
-.overview .callout[data-callout="grid3"] {
+.callout[data-callout^="grid"] {
     background-color: transparent;
     padding: 0;
 
@@ -65,17 +64,20 @@
     }
 }
 
-.overview .callout[data-callout="grid4"] .callout-content {
+.callout[data-callout="grid"] .callout-content {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.callout[data-callout="grid4"] .callout-content {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.overview .callout[data-callout="grid3"] .callout-content {
+.callout[data-callout="grid3"] .callout-content {
     grid-template-columns: repeat(3, 1fr);
 }
 
 @media (max-width: 480px) {
-    .overview .callout[data-callout="grid4"] .callout-content,
-    .overview .callout[data-callout="grid3"] .callout-content {
+    .overview .callout[data-callout^="grid"] .callout-content {
         grid-template-columns: repeat(2, 1fr);
     }
 }

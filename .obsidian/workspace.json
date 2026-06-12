@@ -165,7 +165,7 @@
             }
           },
           {
-            "id": "76122a6367ca364e",
+            "id": "f96fa9b48bad9b78",
             "type": "leaf",
             "state": {
               "type": "persian-calendar",
@@ -192,23 +192,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "54d8a53a49edb7ff",
+  "active": "6ff19b9f33c6d328",
   "lastOpenFiles": [
-    "Journal/1405/روزنوشت/2026-05-29.md",
-    "Journal/1405/1405.md",
-    "Journal/1405/روزنوشت",
-    "Journal/1405/ماه‌نوشت/1405-03.md",
+    "Templates/Yearly + Report.md",
     "dashboard.md",
-    "Journal/1405/ماه‌نوشت",
-    "Templates/Yearly.md",
-    "Templates/Yearly+report.md",
-    "README.md",
     "Templates/Add Boolean Habit.md",
     "Templates/Add Numeric Habit.md",
     "Templates/Daily.md",
     "Templates/Monthly.md",
     "Templates/Quarterly.md",
     "Templates/Weekly.md",
+    "Templates/Yearly.md",
+    "Journal/1405/روزنوشت/2026-05-29.md",
+    "Journal/1405/1405.md",
+    "Journal/1405/روزنوشت",
+    "Journal/1405/ماه‌نوشت/1405-03.md",
+    "Journal/1405/ماه‌نوشت",
+    "Templates/Yearly+report.md",
+    "README.md",
     "Journal/1405",
     "Untitled.md",
     "Journal/1404/روزنوشت/2026-02-16.md",
@@ -227,7 +228,6 @@
     "Templates/Add Boolean Habit 1.md",
     "Journal/1404/روزنوشت/2026-02-06.md",
     "Journal/1404/روزنوشت/2026-02-05.md",
-    "Journal/1404/روزنوشت/2026-02-04.md",
     "Untitled",
     "journal/2026"
   ]
