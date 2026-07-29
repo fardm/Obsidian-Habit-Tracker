@@ -2,6 +2,10 @@
   "versionUpdate": true,
   "language": "fa",
   "dateFormat": "gregorian",
+  "dailyNoteFormat": "YYYY-MM-DD",
+  "monthlyNoteNaming": "jalali",
+  "yearlyNoteNaming": "jalali",
+  "weekCalculation": "jalali-first-week-start",
   "askForCreateNote": false,
   "openDailyNoteOnStartup": false,
   "showSeasonalNotes": true,
@@ -28,5 +32,6 @@
   "showSunniEvents": false,
   "showIRGovernmentEvents": false,
   "showIRIslamEvents": false,
-  "lastSeenVersion": "4.5.12"
+  "lastSeenVersion": "4.8.3",
+  "legacyPathPatternsMigrated": true
 }
