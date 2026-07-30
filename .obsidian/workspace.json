@@ -165,7 +165,7 @@
             }
           },
           {
-            "id": "f96fa9b48bad9b78",
+            "id": "b4910035e73eb72d",
             "type": "leaf",
             "state": {
               "type": "persian-calendar",
@@ -192,7 +192,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6ff19b9f33c6d328",
+  "active": "b4910035e73eb72d",
   "lastOpenFiles": [
     "Templates/Yearly + Report.md",
     "dashboard.md",
