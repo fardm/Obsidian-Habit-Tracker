@@ -1,4 +1,4 @@
-# تمپلیت هبیت ترکر در ابسیدین
+# تمپلیت هبیت ترکر ابسیدین
 
 ![image](screenshot.webp)
 
@@ -26,7 +26,7 @@
     - **روش حرفه‌ای (Clone با Git):** اگر روی سیستم شما Git نصب است، در ترمینال یا CMD دستور زیر را وارد کنید:
     
 ```
-git clone https://github.com/fardm/Obsidian-Habit-Tracker.git
+git clone https://github.com/fardm/Obsidian-Habit-Tracker-Template.git
 ```
 
 3. فولدر پروژه را در ابسیدین از بخش **Open folder** باز کنید.
