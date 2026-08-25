@@ -1,3 +1,5 @@
+
+
 # تمپلیت هبیت ترکر ابسیدین
 
 ![image](screenshot.webp)
@@ -86,7 +88,7 @@ const from = {
 const dateSource = {
   type: "filename",        // filename یا frontmatter
   frontmatterField: "date", // نام فیلد تاریخ در frontmatter
-  dateFormat: "YYYY/MM/DD"  // فرمت تاریخ
+  dateFormat: "YYYY-MM-DD"  // فرمت تاریخ
 };
 ```
 
